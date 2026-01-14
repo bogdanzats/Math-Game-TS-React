@@ -22,14 +22,14 @@ const Main = () => {
   return (
     <>
       <div className={styles.statsContainer}>
-        <div>Лучший результат: { best }</div>
-        <div>Последний результат: { currentCorrect }</div>
+        <div>Best result: { best }</div>
+        <div>Last result: { currentCorrect }</div>
       </div>
 
       <div className={styles.mainContainer}>
         <div className={styles.title}>Speed Math</div>
-        <div className={styles.description}>Вам будет дано 60, решите так много примеров как сможете</div>
-        <button className={styles.gameStart} onClick={() => navigate('/game')}>Начать</button>
+        <div className={styles.description}>You will be given 60 seconds, solve as many examples as you can</div>
+        <button className={styles.gameStart} onClick={() => navigate('/game')}>Start</button>
       </div>
     </>
   );

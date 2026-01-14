@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./StylesForResultPage.module.css";
+import { useNavigate } from 'react-router-dom';
 
 const Result = () => {
+  const navigate = useNavigate();
+
   const [currentCorrect, setCurrentCorrect] = useState<number>(0);
   const [totalAnswered, setTotalAnswered] = useState<number>(0);
   const [bestResult, setBestResult] = useState<number>(0);
@@ -27,17 +30,17 @@ const Result = () => {
 
   return (
     <div className={styles.resultCard}>
-      <h2>Результат</h2>
+      <h2>Result</h2>
       <div className={styles.resultItem}>
-        <span>Примеров решено:</span>
+        <span>Examples solved:</span>
         <span>{totalAnswered}</span>
       </div>
       <div className={styles.resultItem}>
-        <span>Правильных ответов:</span>
+        <span>Correct answers:</span>
         <span>{currentCorrect}</span>
       </div>
       <div className={styles.resultItem}>
-        <span>Лучший результат:</span>
+        <span>Best result:</span>
         <span>
           {bestResult}
           {previousResult !== null && bestResult - previousResult !== 0
@@ -46,15 +49,15 @@ const Result = () => {
         </span>
       </div>
       <div className={styles.resultItem}>
-        <span>Предыдущий результат:</span>
+        <span>Previous result:</span>
         <span>
           {previousResult !== null
             ? `${previousResult} (${currentCorrect - previousResult >= 0 ? "+" : ""}${currentCorrect - previousResult})`
             : "—"}
         </span>
       </div>
-      <button className={styles.resultButton} onClick={() => (window.location.href = "/")}>
-        Понятно
+      <button className={styles.resultButton} onClick={() => (navigate("/"))}>
+        Understand
       </button>
     </div>
   );

@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Math-Game-TS-React">
       <App />
     </BrowserRouter>
   </React.StrictMode>

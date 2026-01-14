@@ -13,7 +13,7 @@ const Countdown = () => {
     return () => clearTimeout(timerId);
   }, [count]);
 
-  return <div style={{ marginLeft: "45%", marginTop: "10px" }}>Осталось: {count} секунд</div>;
+  return <div style={{ marginLeft: "45%", marginTop: "10px" }}>Time left: {count} seconds</div>;
 };
 
 export default Countdown;

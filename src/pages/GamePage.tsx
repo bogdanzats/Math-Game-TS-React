@@ -122,7 +122,7 @@ export default function Game() {
       </div>
 
       <div className={styles.mainContainer}>
-        <h1 className={styles.title}>Решите пример</h1>
+        <h1 className={styles.title}>Solve the example</h1>
         <h2>
           {random1} {sign} {random2} = ?
         </h2>
@@ -130,7 +130,7 @@ export default function Game() {
           <input
             type="number"
             value={inputValue}
-            placeholder='Введите ответ'
+            placeholder='Enter the answer'
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
             style={{ marginRight: "10px" }}
